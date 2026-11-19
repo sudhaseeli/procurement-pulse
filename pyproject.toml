@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "procurement-pulse"
+version = "0.1.0"
+description = "Spend, competition and supplier-risk analytics on Department of Veterans Affairs contract data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["duckdb>=1.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+pulse = "pulse.cli:main"
+
+[tool.setuptools]
+packages = ["pulse"]
